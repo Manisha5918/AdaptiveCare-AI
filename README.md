@@ -5,7 +5,7 @@
 > Submission for **Build The Next Big UI** / **Frontend Battle 2026**
 > **Organizer**: TechVerse Solutions
 > **Category**: Healthcare & Wellness
-> **Participation**: Individual
+
 
 ---
 
