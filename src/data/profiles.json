@@ -1,0 +1,153 @@
+{
+  "senior": {
+    "id": "senior",
+    "name": "Senior Citizen",
+    "role": "Independent Wellness & SOS",
+    "avatar": "senior",
+    "theme": {
+      "accent": "#ef4444",
+      "accentRgb": "239, 68, 68",
+      "bgGradient": "from-red-50/20 to-orange-50/20",
+      "bgGradientDark": "from-red-950/10 to-orange-950/10",
+      "fontScale": "large",
+      "density": "simple"
+    },
+    "widgets": [
+      { "id": "emergency", "type": "EmergencyCard", "size": "col-span-12 md:col-span-8", "priority": 1 },
+      { "id": "health-score", "type": "HealthScore", "size": "col-span-12 md:col-span-4", "priority": 2 },
+      { "id": "medications", "type": "MedicationTracker", "size": "col-span-12 md:col-span-6", "priority": 3 },
+      { "id": "appointments", "type": "Appointments", "size": "col-span-12 md:col-span-6", "priority": 4 }
+    ],
+    "medications": [
+      { "id": "med-1", "name": "Blood Pressure (Amlodipine)", "dosage": "5mg", "time": "8:00 AM", "taken": false },
+      { "id": "med-2", "name": "Multivitamin", "dosage": "1 Capsule", "time": "12:00 PM", "taken": true },
+      { "id": "med-3", "name": "Cholesterol (Atorvastatin)", "dosage": "20mg", "time": "8:00 PM", "taken": false }
+    ],
+    "appointments": [
+      { "id": "apt-1", "doctor": "Dr. Sarah Jenkins", "specialty": "Cardiologist", "time": "Tomorrow, 10:30 AM", "location": "Heart & Vascular Center, Room 402" },
+      { "id": "apt-2", "doctor": "Dr. Robert Chen", "specialty": "General Practitioner", "time": "July 12, 2:00 PM", "location": "Community Health Clinic, Suite A" }
+    ],
+    "emergencyContacts": [
+      { "id": "con-1", "name": "Sarah (Daughter)", "relation": "Primary Caregiver", "phone": "+1 (555) 987-6543" },
+      { "id": "con-2", "name": "Dr. Jenkins (Heart)", "relation": "Cardiologist", "phone": "+1 (555) 123-4567" }
+    ],
+    "healthScore": 88
+  },
+  "diabetic": {
+    "id": "diabetic",
+    "name": "Diabetic Patient",
+    "role": "Glucose & Diet Management",
+    "avatar": "diabetic",
+    "theme": {
+      "accent": "#0ea5e9",
+      "accentRgb": "14, 165, 233",
+      "bgGradient": "from-sky-50/20 to-blue-50/20",
+      "bgGradientDark": "from-sky-950/10 to-blue-950/10",
+      "fontScale": "medium",
+      "density": "balanced"
+    },
+    "widgets": [
+      { "id": "glucose", "type": "GlucoseTracker", "size": "col-span-12 md:col-span-8", "priority": 1 },
+      { "id": "health-score", "type": "HealthScore", "size": "col-span-12 md:col-span-4", "priority": 2 },
+      { "id": "medications", "type": "MedicationTracker", "size": "col-span-12 md:col-span-5", "priority": 3 },
+      { "id": "meal-planner", "type": "MealPlanner", "size": "col-span-12 md:col-span-7", "priority": 4 },
+      { "id": "appointments", "type": "Appointments", "size": "col-span-12 md:col-span-6", "priority": 5 },
+      { "id": "timeline", "type": "ActivityTimeline", "size": "col-span-12 md:col-span-6", "priority": 6 }
+    ],
+    "medications": [
+      { "id": "med-1", "name": "Metformin", "dosage": "850mg", "time": "Breakfast & Dinner", "taken": true },
+      { "id": "med-2", "name": "Humalog (Fast-acting)", "dosage": "Sliding scale (approx 4 units)", "time": "Before Meals", "taken": false },
+      { "id": "med-3", "name": "Lantus (Long-acting)", "dosage": "15 units", "time": "10:00 PM", "taken": false }
+    ],
+    "appointments": [
+      { "id": "apt-1", "doctor": "Dr. Angela Martinez", "specialty": "Endocrinologist", "time": "Thursday, 9:15 AM", "location": "Metabolic Health Clinic, Floor 2" },
+      { "id": "apt-2", "doctor": "Apex Lab", "specialty": "HbA1c Blood Draw", "time": "July 18, 8:00 AM", "location": "Labcorp, Suite 104" }
+    ],
+    "glucoseData": {
+      "current": 108,
+      "unit": "mg/dL",
+      "status": "in-range",
+      "history": [128, 142, 115, 95, 102, 120, 108]
+    },
+    "meals": [
+      { "id": "meal-1", "type": "Breakfast", "food": "Oatmeal with Almonds & Blueberries", "carbs": "32g", "logged": true },
+      { "id": "meal-2", "type": "Lunch", "food": "Grilled Chicken Caesar Salad", "carbs": "12g", "logged": true },
+      { "id": "meal-3", "type": "Dinner", "food": "Baked Salmon with Quinoa & Asparagus", "carbs": "28g", "logged": false }
+    ],
+    "healthScore": 92
+  },
+  "fitness": {
+    "id": "fitness",
+    "name": "Fitness Enthusiast",
+    "role": "Cardio & Calorie Optimization",
+    "avatar": "fitness",
+    "theme": {
+      "accent": "#10b981",
+      "accentRgb": "16, 185, 129",
+      "bgGradient": "from-emerald-50/20 to-teal-50/20",
+      "bgGradientDark": "from-emerald-950/10 to-teal-950/10",
+      "fontScale": "medium",
+      "density": "detailed"
+    },
+    "widgets": [
+      { "id": "calories", "type": "CaloriesTracker", "size": "col-span-12 md:col-span-6 lg:col-span-4", "priority": 1 },
+      { "id": "heart-rate", "type": "HeartRateTracker", "size": "col-span-12 md:col-span-6 lg:col-span-5", "priority": 2 },
+      { "id": "health-score", "type": "HealthScore", "size": "col-span-12 md:col-span-6 lg:col-span-3", "priority": 3 },
+      { "id": "achievements", "type": "Achievements", "size": "col-span-12 md:col-span-6 lg:col-span-6", "priority": 4 },
+      { "id": "timeline", "type": "ActivityTimeline", "size": "col-span-12 md:col-span-6 lg:col-span-6", "priority": 5 }
+    ],
+    "calories": {
+      "burned": 620,
+      "targetBurned": 800,
+      "consumed": 1850,
+      "targetConsumed": 2300,
+      "water": 5,
+      "targetWater": 8
+    },
+    "heartRate": {
+      "current": 72,
+      "resting": 58,
+      "max": 164,
+      "history": [62, 68, 75, 110, 145, 158, 120, 85, 72]
+    },
+    "achievements": [
+      { "id": "ach-1", "title": "Calorie Crusher", "desc": "Burned 800+ active calories in a single day", "unlocked": true, "date": "Yesterday" },
+      { "id": "ach-2", "title": "Hydration Master", "desc": "Drank 8 glasses of water every day for a week", "unlocked": true, "date": "3 days ago" },
+      { "id": "ach-3", "title": "Cardio Legend", "desc": "Maintain heart rate in Zone 4 for 30+ mins", "unlocked": false, "date": "In progress (72%)" }
+    ],
+    "healthScore": 95
+  },
+  "caregiver": {
+    "id": "caregiver",
+    "name": "Family Caregiver",
+    "role": "Multi-person Oversight",
+    "avatar": "caregiver",
+    "theme": {
+      "accent": "#8b5cf6",
+      "accentRgb": "139, 92, 246",
+      "bgGradient": "from-purple-50/20 to-indigo-50/20",
+      "bgGradientDark": "from-purple-950/10 to-indigo-950/10",
+      "fontScale": "medium",
+      "density": "balanced"
+    },
+    "widgets": [
+      { "id": "family-overview", "type": "FamilyOverview", "size": "col-span-12 md:col-span-8", "priority": 1 },
+      { "id": "health-score", "type": "HealthScore", "size": "col-span-12 md:col-span-4", "priority": 2 },
+      { "id": "emergency", "type": "EmergencyCard", "size": "col-span-12 md:col-span-5", "priority": 3 },
+      { "id": "appointments", "type": "Appointments", "size": "col-span-12 md:col-span-7", "priority": 4 }
+    ],
+    "patients": [
+      { "id": "pat-1", "name": "Evelyn (Mother)", "condition": "Hypertension & Mobility", "status": "Stable", "medsStatus": "2/3 Taken", "medsWarning": true, "lastSync": "10 mins ago" },
+      { "id": "pat-2", "name": "Tommy (Son)", "condition": "Type 1 Diabetes Management", "status": "Glucose 142 mg/dL", "medsStatus": "1/1 Taken", "medsWarning": false, "lastSync": "2 mins ago" }
+    ],
+    "appointments": [
+      { "id": "apt-1", "doctor": "Dr. Jenkins (Evelyn)", "specialty": "Cardiology", "time": "Tomorrow, 10:30 AM", "location": "Heart & Vascular Center, Room 402" },
+      { "id": "apt-2", "doctor": "Dr. Angela Martinez (Tommy)", "specialty": "Endocrinology Pediatric", "time": "Thursday, 9:15 AM", "location": "Metabolic Health Clinic, Floor 2" }
+    ],
+    "emergencyContacts": [
+      { "id": "con-1", "name": "Evelyn's Nurse", "relation": "Home Health Aide", "phone": "+1 (555) 765-4321" },
+      { "id": "con-2", "name": "Local Emergency Dept", "relation": "Hospital Dispatch", "phone": "+1 (555) 911-0000" }
+    ],
+    "healthScore": 85
+  }
+}

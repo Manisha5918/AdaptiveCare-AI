@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Outfit", "Inter", system-ui, -apple-system, sans-serif;
+  
+  /* Modern Premium Charcoal Colors mapped to spec */
+  --color-charcoal-50: #F8FAFC;
+  --color-charcoal-100: #F1F5F9;
+  --color-charcoal-200: #E2E8F0;
+  --color-charcoal-300: #CBD5E1;
+  --color-charcoal-400: #94A3B8;
+  --color-charcoal-450: #7a8a9e;
+  --color-charcoal-455: #7e8e9e;
+  --color-charcoal-500: #64748B;
+  --color-charcoal-550: #5a6a80;
+  --color-charcoal-555: #5b6b7e;
+  --color-charcoal-600: #475569;
+  --color-charcoal-650: #3d495e;
+  --color-charcoal-700: #334155;
+  --color-charcoal-800: #1E293B;
+  --color-charcoal-850: #162032;
+  --color-charcoal-900: #111827;
+  --color-charcoal-950: #0F172A;
+  
+  --color-accent-blue: #2563EB;
+  --color-slate-250: #e5e9f0;
+  --color-slate-255: #e4e8f0;
+  --color-sky-550: #0284c7;
+  --color-sky-555: #0380c5;
+  --color-indigo-650: #4f46e5;
+  --color-indigo-750: #4338ca;
+
+  /* Map Tailwind font utilities to dynamic CSS variables */
+  --text-xs: var(--text-xs-scale, 0.75rem);
+  --text-sm: var(--text-sm-scale, 0.875rem);
+  --text-base: var(--text-base-scale, 1rem);
+  --text-lg: var(--text-lg-scale, 1.125rem);
+  --text-xl: var(--text-xl-scale, 1.25rem);
+  --text-2xl: var(--text-2xl-scale, 1.5rem);
+  --text-3xl: var(--text-3xl-scale, 1.875rem);
+  --text-4xl: var(--text-4xl-scale, 2.25rem);
+}
+
+/* Default font scale (medium) as root defaults */
+:root {
+  --text-xs-scale: 0.8125rem;
+  --text-sm-scale: 0.9375rem;
+  --text-base-scale: 1.0625rem;
+  --text-lg-scale: 1.25rem;
+  --text-xl-scale: 1.4375rem;
+  --text-2xl-scale: 1.75rem;
+  --text-3xl-scale: 2.125rem;
+  --text-4xl-scale: 2.625rem;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Accessibility Font Scale Modifiers */
+.font-scale-small {
+  --text-xs-scale: 0.75rem;     /* 12px */
+  --text-sm-scale: 0.8125rem;   /* 13px */
+  --text-base-scale: 0.9375rem; /* 15px */
+  --text-lg-scale: 1.0625rem;   /* 17px */
+  --text-xl-scale: 1.25rem;      /* 20px */
+  --text-2xl-scale: 1.4375rem;  /* 23px */
+  --text-3xl-scale: 1.75rem;     /* 28px */
+  --text-4xl-scale: 2.125rem;   /* 34px */
+}
+
+.font-scale-medium {
+  --text-xs-scale: 0.8125rem;   /* 13px */
+  --text-sm-scale: 0.9375rem;   /* 15px */
+  --text-base-scale: 1.0625rem; /* 17px */
+  --text-lg-scale: 1.25rem;      /* 20px */
+  --text-xl-scale: 1.4375rem;   /* 23px */
+  --text-2xl-scale: 1.75rem;     /* 28px */
+  --text-3xl-scale: 2.125rem;   /* 34px */
+  --text-4xl-scale: 2.625rem;   /* 42px */
+}
+
+.font-scale-large {
+  --text-xs-scale: 0.9375rem;   /* 15px */
+  --text-sm-scale: 1.0625rem;   /* 17px */
+  --text-base-scale: 1.25rem;    /* 20px */
+  --text-lg-scale: 1.4375rem;   /* 23px */
+  --text-xl-scale: 1.75rem;      /* 28px */
+  --text-2xl-scale: 2.125rem;   /* 34px */
+  --text-3xl-scale: 2.625rem;   /* 42px */
+  --text-4xl-scale: 3.25rem;     /* 52px */
+}
+
+.font-scale-extra-large {
+  --text-xs-scale: 1.0625rem;   /* 17px */
+  --text-sm-scale: 1.25rem;      /* 20px */
+  --text-base-scale: 1.4375rem; /* 23px */
+  --text-lg-scale: 1.75rem;      /* 28px */
+  --text-xl-scale: 2.125rem;     /* 34px */
+  --text-2xl-scale: 2.625rem;   /* 42px */
+  --text-3xl-scale: 3.25rem;     /* 52px */
+  --text-4xl-scale: 4rem;        /* 64px */
+}
+
+/* Premium Styling Base Utilities */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-attachment: fixed;
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 1px 3px -1px rgba(0, 0, 0, 0.02);
+  
+  /* Prevent transform subpixel blurring */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.75); /* Card background #111827 translucent */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.45);
+  
+  /* Prevent transform subpixel blurring */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elegant Glowing Effects */
+.glowing-orb {
+  filter: blur(120px);
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
+}
+
+.dark .glowing-orb {
+  opacity: 0.25;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+/* Pulse animation for the glowing heartbeat and orb */
+@keyframes soft-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.85;
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3s infinite ease-in-out;
+}
+
+/* Shimmer animation for card skeleton loaders */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, rgba(226, 232, 240, 0.1) 25%, rgba(226, 232, 240, 0.2) 37%, rgba(226, 232, 240, 0.1) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Floating particles background animation */
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.floating-particle {
+  animation: float-particle 7s infinite ease-in-out;
+}
+
+/* Sidebar jump widget highlighting indicator */
+@keyframes highlight-glow {
+  0% {
+    box-shadow: 0 0 0 0px rgba(14, 165, 233, 0.5), 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(14, 165, 233, 0.5);
+  }
+  30% {
+    box-shadow: 0 0 0 10px rgba(14, 165, 233, 0.3), 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(14, 165, 233, 0.85);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(14, 165, 233, 0), 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.glow-highlight {
+  animation: highlight-glow 1.5s ease-out !important;
+}
+
+/* Dedicated hero gradient text rule to prevent color override clippings */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 55%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Futuristic 3D Tablet Mockup Styling */
+.tablet-bezel {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 0 4px #1e293b,
+    0 0 30px 2px rgba(14, 165, 233, 0.15);
+}
+
+.dark .tablet-bezel {
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 0 0 4px #0f172a,
+    0 0 40px 4px rgba(14, 165, 233, 0.1);
+}
