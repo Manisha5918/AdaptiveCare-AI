@@ -1,4 +1,4 @@
-# MorphUI AI
+# AdaptiveCare AI
 > **"The healthcare interface that adapts to you in real-time."**
 >
 > Submission for **Build The Next Big UI** / **Frontend Battle 2026**
@@ -10,7 +10,7 @@
 ## 🚀 1. The Vision & Problem Statement
 Traditional digital health portals force every user into a single, static layout template. However, a user's health profile, cognitive bandwidth, physical dexterity, and medical goals are never static.
 
-**MorphUI AI** addresses these core interface limitations:
+**AdaptiveCare AI** addresses these core interface limitations:
 * **Cognitive Congestion**: Elderly patients get overwhelmed by complex, multi-layered dashboards, resulting in search anxiety.
 * **Chronic Management Friction**: Chronic patients (e.g., diabetics) struggle to quickly log daily inputs (blood sugar, insulin checks) when mixed with general wellness logs.
 * **Data Deprivation**: Athletes are forced to dig through deep menus to compile wearable sensor graphs, active calories, and heart rate zones during workouts.
@@ -20,7 +20,7 @@ Traditional digital health portals force every user into a single, static layout
 ---
 
 ## 🎨 2. The Solution: Real-Time Adaptive UI Architecture
-**MorphUI AI** introduces a dynamic **Adaptive UI Canvas Engine** that shifts grid distributions, typography scales, layout gaps, and active widget sets in real-time according to the selected user profile, layout density settings, and font scales.
+**AdaptiveCare AI** introduces a dynamic **Adaptive UI Canvas Engine** that shifts grid distributions, typography scales, layout gaps, and active widget sets in real-time according to the selected user profile, layout density settings, and font scales.
 
 ```
                   ┌──────────────────────────────┐
@@ -110,7 +110,7 @@ All child components inherit these scale variables, adjusting font sizing across
 ## 📂 6. Project Architecture
 
 ```
-morphui-ai/
+AdaptiveCare AI/
 ├── src/
 │   ├── components/
 │   │   ├── common/
@@ -152,8 +152,8 @@ Make sure you have [Node.js](https://nodejs.org/) (v18+) installed.
 ### Setup Instructions:
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<your-username>/morphui-ai.git
-   cd morphui-ai
+   git clone https://github.com/<your-username>/AdaptiveCare-AI.git
+   cd adaptiveCare-ai
    ```
 2. **Install dependencies**:
    ```bash
