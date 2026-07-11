@@ -132,14 +132,13 @@ The prototype includes a fullscreen Emergency SOS experience designed to make em
 
 ---
 
-### Responsive Mobile Experience
+###  Responsive Mobile Experience
 
 AdaptiveCare AI includes responsive layouts designed to adjust across desktop and smaller screen sizes.
 
 <p align="center">
-  <img src="images/responsive-mobile.png" alt="AdaptiveCare AI Responsive Mobile Experience" width="350"/>
+  <img src="./images/responsive-mobile.jpeg" alt="AdaptiveCare AI Responsive Mobile Experience" width="350">
 </p>
-
 ---
 
 ##  The Problem
